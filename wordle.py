@@ -169,7 +169,7 @@ class WordleGuesser():
                 for key in best_guesses:
                     f.write(key + ": " + str(best_guesses[key]) + "\n")
         min_length = min(best_guesses.values())
-        return [key for key in best_guesses if best_guesses[key] == temp][0], min_length
+        return [key for key in best_guesses if best_guesses[key] == min_length][0], min_length
 
 def test_guesser(first_word = "raise", use_full_vocab=False, only_guess_from_answers = True):
     """ Guesses using first_word then using the next best word according to the guesser settings.

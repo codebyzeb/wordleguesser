@@ -215,3 +215,8 @@ def get_best_second_word(use_full_vocab=False, only_guess_from_answers=True):
     with open("best_pairs.txt",'w') as f:
         for key in best_guess_pair:
             f.write(key + ": " + str(best_guess_pair[key]) + "\n")
+
+
+def evaluate_pair(word1, word2):
+    guesser = WordleGuesser(False, False)
+    print(get_expected_length_after_guess(word2, guesser.guesser_state, guesser.possible_answers, guess_word_first=word1))

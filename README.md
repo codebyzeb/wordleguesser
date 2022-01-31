@@ -1,5 +1,5 @@
 # Wordle Guesser
-A little python script for finding the best word choice in a Wordle game, by assuming that at each step you want to minimise the average number of possible answers left after guessing that word (note this is a greedy assumption and not fully correct).
+A little python script for finding the best word choice in a Wordle game, by assuming that at each step you want to minimise the average number of possible answers left after guessing that word (note this is a greedy assumption and not fully correct, but as a TikTok user pointed out, this is the best you can do before it gets NP-hard).
 
 ## Finding the best first word
 

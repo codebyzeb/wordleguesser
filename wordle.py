@@ -185,7 +185,10 @@ def test_guesser(first_word = "raise", use_full_vocab=False, only_guess_from_ans
         while response != "ggggg":
             if num_guesses == 2:
                 guesser.only_guess_from_answers = True
-            guess = guesser.get_smart_guess() if len(guesser.possible_answers) > 1 else guesser.possible_answers[0]
+            if len(guesser.possible_answers) > 1:
+                guess, _ = guesser.get_smart_guess()
+            else:
+                guess = guesser.possible_answers[0]
             response = get_response(true_word, guess)
             guesser.update(guess, response)
             num_guesses+=1

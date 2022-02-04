@@ -1,6 +1,14 @@
 # Wordle Guesser
 A little python script for finding the best word choice in a Wordle game, by assuming that at each step you want to minimise the average number of possible answers left after guessing that word (note this is a greedy assumption and not fully correct, but as a TikTok user pointed out, this is the best you can do before it gets NP-hard).
 
+## Install Dependencies
+
+The Wordle Guesser requires a few additional code libraries that don't come pre-installed with python. To run the program you will first need to run the following command:
+
+```bash
+pip install -r requirements.txt #Install dependencies
+```
+
 ## Finding the best first word
 
 To find the best first word, run the following in python:
